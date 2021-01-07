@@ -1,14 +1,16 @@
 # depslib dependency file v1.0
-1610038585 source:d:\project-cis\quanlythuvien\main.cpp
+1610045512 source:d:\project-cis\quanlythuvien\main.cpp
 	<iostream>
 	"Menu.h"
 	"ManageBooks.h"
 	"ManagerReaders.h"
 	<fstream>
 
-1609951465 source:d:\project-cis\quanlythuvien\src\menu.cpp
+1610045846 source:d:\project-cis\quanlythuvien\src\menu.cpp
 	"Menu.h"
 	<ManageBooks.h>
+	<ManagerReaders.h>
+	<Extension.h>
 	<windows.h>
 	<stdio.h>
 	<iostream>
@@ -52,17 +54,17 @@
 1609748948 d:\project-cis\quanlythuvien\include\rsfile.h
 	<ManageBooks.h>
 
-1610015230 source:d:\project-cis\quanlythuvien\src\extension.cpp
+1610040588 source:d:\project-cis\quanlythuvien\src\extension.cpp
 	"Extension.h"
 	<string>
 	<time.h>
 	<iostream>
 	<string>
 
-1610015306 d:\project-cis\quanlythuvien\include\extension.h
+1610040472 d:\project-cis\quanlythuvien\include\extension.h
 	<string>
 
-1610028610 source:d:\project-cis\quanlythuvien\src\managerreaders.cpp
+1610046005 source:d:\project-cis\quanlythuvien\src\managerreaders.cpp
 	"ManagerReaders.h"
 	"Extension.h"
 	"Reader.h"
@@ -70,6 +72,7 @@
 	<string>
 	<iomanip>
 	<vector>
+	<fstream>
 
 1610036430 d:\project-cis\quanlythuvien\include\managerreaders.h
 	<Reader.h>

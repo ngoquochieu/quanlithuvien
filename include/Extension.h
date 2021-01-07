@@ -10,6 +10,7 @@ class Extension
         void format(string &str);
         int randomID();
         bool requiredToEnter(string &str);
+        bool isReuse(void(*reuse)());
 
     protected:
 

@@ -11,8 +11,6 @@ int main()
 //    menu.menuManagerBooks();
     //cin.seekg(0, ios::end);
     //cin.clear();
-    ManagerReaders man;
-    man.readFile();
-    man.writeFile();
+    menu.menuManagerReaders();
     return 0;
 }

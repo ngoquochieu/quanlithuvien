@@ -1,5 +1,7 @@
 #include "Menu.h"
 #include <ManageBooks.h>
+#include <ManagerReaders.h>
+#include <Extension.h>
 #include<windows.h>
 #include<stdio.h>
 #include<iostream>
@@ -9,8 +11,11 @@ enum class LuaChon {QUANLISACH, QUANLIDOCGIA, QUANLIMUONTRA, EXIT};
 enum class LuaChonSach {INTOANBOSACH, THEMSACH, XOASACH, TIMSACH, SAVE, EXIT};
 enum class TimKiem {TIMKIEMTHEOIDSACH, TIMKIEMTHEOTENSACH, TIMKIEMTHEOTHELOAI, TIMKIEMTHEOTACGIA, EXIT};
 enum class DocGia {HIENTHITOANBODOCGIA, THEMDOCGIA, XOADOCGIA, UPDATE, SEARCH, SAVE, EXIT};
+enum class UpdateDG {UPDATETENDOCGIA, UPDATESDT, EXIT};
+enum class TimKiemDG {TIMKIEMTHEOID, TIMKIEMTHEOTEN, EXIT};
 ManageBooks man;
 ManagerReaders manRD;
+
 Menu::Menu()
 {
     //ctor
@@ -213,7 +218,6 @@ void Menu::menuManagerBooks()
                         break;
                     };
                 }while(true);
-
                 break;
             }
             case LuaChonSach::EXIT:
@@ -235,6 +239,7 @@ Solution: https://stackoverflow.com/questions/5685471/error-jump-to-case-label
 
 void Menu::menuManagerReaders()
 {
+
     manRD.readFile();
     char* pArr[] = {"HIEN THI TOAN BO DOC GIA", "THEM DOC GIA", "XOA DOC GIA", "UPDATE", "SEARCH", "SAVE", "EXIT"};
     bool check = false;
@@ -253,7 +258,7 @@ void Menu::menuManagerReaders()
             {
                 int n;
                 do{
-                    system("cls")
+                    system("cls");
                     manRD.addRD();
                     cout<<"Ban co muon tiep tuc su dung chuc nang nay nua khong 1/2(1.CO/2.KHONG): ";
                     do{
@@ -268,13 +273,102 @@ void Menu::menuManagerReaders()
             }
             case DocGia::XOADOCGIA:
             {
-                int n
+                int n;
+                do{
+                    system("cls");
+                    manRD.display();
+                    manRD.deleteRD();
+                    cout<<"Ban co muon tiep tuc su dung chuc nang nay nua khong 1/2(1.CO/2.KHONG): ";
+                    do{
+                        cin>>n;
+                        if(n != 1 and n != 2)
+                            cout<<"Khong hop le. Nhap lai: ";
+                        else
+                            break;
+                    }while(true);
+                }while(n == 1);
+                break;
+            }
+            case DocGia::UPDATE:
+            {
+                bool check = false;
+                char* arr[] = {"UPDATE TEN DOC GIA", "UPDATE SDT", "EXIT"};
+                do{
+                    int choice = menuOptions(arr, 3);
+                    system("cls");
+                    switch((UpdateDG)choice)
+                    {
+                        case UpdateDG::UPDATETENDOCGIA:
+                        {
+                            manRD.updateTenDG();
+                            break;
+                        }
+                        case UpdateDG::UPDATESDT:
+                        {
+                            manRD.updateSDT();
+                            break;
+                        }
+                        case UpdateDG::EXIT:
+                        {
+                            check = true;
+                            break;
+                        }
+                    }
+                }while(!check);
+                break;
+            }
+
+            case DocGia::SEARCH:
+            {
+                char* arr[] = {"TIM KIEM THEO ID", "TIM KIEM THEO TEN", "EXIT"};
+                bool KT = false;
+                do{
+                    int choice = menuOptions(arr, 3);
+                    system("cls");
+                    switch((TimKiemDG)choice)
+                    {
+                        case TimKiemDG::TIMKIEMTHEOTEN:
+                        {
+                            manRD.display(manRD.searchName());
+                            break;
+                        }
+                        case TimKiemDG::TIMKIEMTHEOID:
+                        {
+                            manRD.display(manRD.searchID());
+                            break;
+                        }
+                        case TimKiemDG::EXIT:
+                        {
+                            KT = true;
+                            break;
+                        }
+                    }
+                }while(!KT);
+                break;
+            }
+            case DocGia::SAVE:
+            {
+                cout<<"Ban co chac chan luu khong 1/2(1.CO/2.KHONG):";
+                int a;
+                do{
+                    cin>>a;
+                    if(a != 1 and a != 2)
+                        cout<<"Khong hop le. Hay nhap lai: ";
+                    else {
+                        manRD.writeFile();
+                        break;
+                    };
+                }while(true);
+                break;
+            }
+            case DocGia::EXIT:
+            {
+                check = true;
+                break;
             }
         }
-    }
-
+    }while(!check);
 }
-
 void Menu::menuManagerBorrow()
 {
 

@@ -69,3 +69,21 @@ bool Extension::requiredToEnter(string& str)
     return true;
 }
 
+bool Extension::isReuse(void(*reuse)())
+{
+    int n;
+    do{
+        system("cls");
+        reuse();
+        cout<<"Ban co muon tiep tuc su dung chuc nang nay nua khong 1/2(1.CO/2.KHONG): ";
+        do{
+            cin>>n;
+            if(n != 1 and n != 2)
+                cout<<"Khong hop le. Nhap lai: ";
+            else
+                break;
+        }while(true);
+    }while(n == 1);
+}
+
+
