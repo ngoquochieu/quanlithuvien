@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1610038585 source:d:\project-cis\quanlythuvien\main.cpp
+	<iostream>
+	"Menu.h"
+	"ManageBooks.h"
+	"ManagerReaders.h"
+	<fstream>
+
+1609951465 source:d:\project-cis\quanlythuvien\src\menu.cpp
+	"Menu.h"
+	<ManageBooks.h>
+	<windows.h>
+	<stdio.h>
+	<iostream>
+	<conio.h>
+
+1609869306 d:\project-cis\quanlythuvien\include\menu.h
+	<string>
+
+1609581153 source:d:\project-cis\quanlythuvien\src\book.cpp
+	"Book.h"
+
+1609856152 d:\project-cis\quanlythuvien\include\book.h
+	<string>
+
+1610015718 source:d:\project-cis\quanlythuvien\src\managebooks.cpp
+	"ManageBooks.h"
+	<string>
+	<iostream>
+	"Book.h"
+	<iomanip>
+	<fstream>
+	<vector>
+	<Extension.h>
+
+1609957047 d:\project-cis\quanlythuvien\include\managebooks.h
+	<vector>
+	"Book.h"
+
+1609606053 source:d:\project-cis\quanlythuvien\src\goto.cpp
+	"Goto.h"
+	<windows.h>
+
+1609606703 d:\project-cis\quanlythuvien\include\goto.h
+
+1609748970 source:d:\project-cis\quanlythuvien\src\rsfile.cpp
+	"RSFile.h"
+	<iostream>
+	<fstream>
+	<Book.h>
+
+1609748948 d:\project-cis\quanlythuvien\include\rsfile.h
+	<ManageBooks.h>
+
+1610015230 source:d:\project-cis\quanlythuvien\src\extension.cpp
+	"Extension.h"
+	<string>
+	<time.h>
+	<iostream>
+	<string>
+
+1610015306 d:\project-cis\quanlythuvien\include\extension.h
+	<string>
+
+1610028610 source:d:\project-cis\quanlythuvien\src\managerreaders.cpp
+	"ManagerReaders.h"
+	"Extension.h"
+	"Reader.h"
+	<iostream>
+	<string>
+	<iomanip>
+	<vector>
+
+1610036430 d:\project-cis\quanlythuvien\include\managerreaders.h
+	<Reader.h>
+	<vector>
+
+1610014245 d:\project-cis\quanlythuvien\include\reader.h
+	"ManageBooks.h"
+
+1610017544 source:d:\project-cis\quanlythuvien\src\reader.cpp
+	"Reader.h"
+
