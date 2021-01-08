@@ -12,5 +12,6 @@ int main()
     //cin.seekg(0, ios::end);
     //cin.clear();
     menu.menuManagerReaders();
+    menu.menuManagerBooks();
     return 0;
 }

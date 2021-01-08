@@ -38,13 +38,17 @@
 		<Unit filename="include/Extension.h" />
 		<Unit filename="include/Goto.h" />
 		<Unit filename="include/ManageBooks.h" />
+		<Unit filename="include/ManagerReaders.h" />
 		<Unit filename="include/Menu.h" />
+		<Unit filename="include/Reader.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Book.cpp" />
 		<Unit filename="src/Extension.cpp" />
 		<Unit filename="src/Goto.cpp" />
 		<Unit filename="src/ManageBooks.cpp" />
+		<Unit filename="src/ManagerReaders.cpp" />
 		<Unit filename="src/Menu.cpp" />
+		<Unit filename="src/Reader.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
