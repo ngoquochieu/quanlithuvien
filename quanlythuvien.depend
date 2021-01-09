@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1610045512 source:d:\project-cis\quanlythuvien\main.cpp
+1610203992 source:d:\project-cis\quanlythuvien\main.cpp
 	<iostream>
 	"Menu.h"
 	"ManageBooks.h"
 	"ManagerReaders.h"
 	<fstream>
 
-1610045846 source:d:\project-cis\quanlythuvien\src\menu.cpp
+1610203953 source:d:\project-cis\quanlythuvien\src\menu.cpp
 	"Menu.h"
 	<ManageBooks.h>
 	<ManagerReaders.h>
@@ -15,6 +15,7 @@
 	<stdio.h>
 	<iostream>
 	<conio.h>
+	<string>
 
 1609869306 d:\project-cis\quanlythuvien\include\menu.h
 	<string>
@@ -64,7 +65,7 @@
 1610040472 d:\project-cis\quanlythuvien\include\extension.h
 	<string>
 
-1610046005 source:d:\project-cis\quanlythuvien\src\managerreaders.cpp
+1610094227 source:d:\project-cis\quanlythuvien\src\managerreaders.cpp
 	"ManagerReaders.h"
 	"Extension.h"
 	"Reader.h"
@@ -74,7 +75,7 @@
 	<vector>
 	<fstream>
 
-1610036430 d:\project-cis\quanlythuvien\include\managerreaders.h
+1610100010 d:\project-cis\quanlythuvien\include\managerreaders.h
 	<Reader.h>
 	<vector>
 
@@ -83,4 +84,19 @@
 
 1610017544 source:d:\project-cis\quanlythuvien\src\reader.cpp
 	"Reader.h"
+
+1610100250 source:d:\project-cis\quanlythuvien\src\qlthe.cpp
+	"QLThe.h"
+	"ManagerReaders.h"
+	"The.h"
+
+1610100156 d:\project-cis\quanlythuvien\include\qlthe.h
+	<The.h>
+	<vector>
+
+1610203637 d:\project-cis\quanlythuvien\include\the.h
+	<string>
+
+1610097844 source:d:\project-cis\quanlythuvien\src\the.cpp
+	"The.h"
 

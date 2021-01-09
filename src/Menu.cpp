@@ -6,8 +6,10 @@
 #include<stdio.h>
 #include<iostream>
 #include<conio.h>
+#include<string>
 using namespace std;
-enum class LuaChon {QUANLISACH, QUANLIDOCGIA, QUANLIMUONTRA, EXIT};
+//enum class LuaChon {QUANLISACH, QUANLIDOCGIA, QUANLIMUONTRA, EXIT};
+enum class LuaChon {QUANLISACH, QUANLIDOCGIA, EXIT};
 enum class LuaChonSach {INTOANBOSACH, THEMSACH, XOASACH, TIMSACH, SAVE, EXIT};
 enum class TimKiem {TIMKIEMTHEOIDSACH, TIMKIEMTHEOTENSACH, TIMKIEMTHEOTHELOAI, TIMKIEMTHEOTACGIA, EXIT};
 enum class DocGia {HIENTHITOANBODOCGIA, THEMDOCGIA, XOADOCGIA, UPDATE, SEARCH, SAVE, EXIT};
@@ -108,8 +110,32 @@ int Menu::menuOptions(char* pArr[], int n)
 
 void Menu::mainMenu()
 {
-   char* pArr[] ={"Quan li sach", "Quan li doc gia", "Quan li muon tra", "Exit"};
-   int choice = menuOptions(pArr, 4);
+ //  char* pArr[] ={"Quan li sach", "Quan li doc gia", "Quan li muon tra", "Exit"};
+   char* pArr[] ={"Quan li sach", "Quan li doc gia", "Exit"};
+   bool check = false;
+   do{
+        int choice = menuOptions(pArr, 3);
+        system("cls");
+        switch((LuaChon)choice)
+        {
+            case LuaChon::QUANLISACH:
+            {
+                menuManagerBooks();
+                break;
+            }
+            case LuaChon::QUANLIDOCGIA:
+            {
+                menuManagerReaders();
+                break;
+            }
+            case LuaChon::EXIT:
+            {
+                check = true;
+                break;
+            }
+
+        }
+   }while(!check);
 }
 
 void Menu::menuManagerBooks()
@@ -119,6 +145,7 @@ void Menu::menuManagerBooks()
     bool check = false;
     do{
         int choice = menuOptions(pArr, 6);
+//        delete []pArr;
         system("cls");
         switch((LuaChonSach)choice)
         {
@@ -136,11 +163,13 @@ void Menu::menuManagerBooks()
                     man.addBook();
                     cout<<"Ban co muon tiep tuc su dung chuc nang nay nua khong 1/2(1.CO/2.KHONG): ";
                     do{
+                        cin.seekg(0, ios::end);
+                        cin.clear();
                         cin>>n;
                         if(n != 1 and n != 2)
                             cout<<"Khong hop le. Nhap lai: ";
                         else
-                             break; //Sua tiep cho nay
+                            break;
                     }while(true);
                 }while(n == 1);
                 break;
@@ -242,8 +271,7 @@ void Menu::menuManagerReaders()
 
     manRD.readFile();
     char* pArr[] = {"HIEN THI TOAN BO DOC GIA", "THEM DOC GIA", "XOA DOC GIA", "UPDATE", "SEARCH", "SAVE", "EXIT"};
-    bool check = false;
-
+    bool checkk = false;
     do{
         int choice = menuOptions(pArr, 7);
         system("cls");
@@ -363,11 +391,11 @@ void Menu::menuManagerReaders()
             }
             case DocGia::EXIT:
             {
-                check = true;
+                checkk = true;
                 break;
             }
         }
-    }while(!check);
+    }while(!checkk);
 }
 void Menu::menuManagerBorrow()
 {

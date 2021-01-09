@@ -6,6 +6,7 @@
 class ManagerReaders:public Reader
 {
     public:
+        friend class QLThe;
         ManagerReaders();
         virtual ~ManagerReaders();
         void addRD();   //Them 1 doc gia

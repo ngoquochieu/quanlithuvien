@@ -8,10 +8,8 @@ using namespace std;
 int main()
 {
     Menu menu;
-//    menu.menuManagerBooks();
     //cin.seekg(0, ios::end);
     //cin.clear();
-    menu.menuManagerReaders();
-    menu.menuManagerBooks();
+    menu.mainMenu();
     return 0;
 }

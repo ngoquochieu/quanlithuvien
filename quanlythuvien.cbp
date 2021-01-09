@@ -41,6 +41,7 @@
 		<Unit filename="include/ManagerReaders.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Reader.h" />
+		<Unit filename="include/The.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Book.cpp" />
 		<Unit filename="src/Extension.cpp" />
@@ -49,6 +50,7 @@
 		<Unit filename="src/ManagerReaders.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Reader.cpp" />
+		<Unit filename="src/The.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

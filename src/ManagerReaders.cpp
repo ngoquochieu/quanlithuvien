@@ -165,8 +165,8 @@ void ManagerReaders::display()
     for(int i = 0; i < readers.size(); i ++)
     {
         cout<<"  "<<i+1<<setw(19)<<readers[i].maDG<<setw(45)<<readers[i].tenDG<<setw(26)<<readers[i].SDT<<setw(21)<<readers[i].soThe<<endl;
-      //  cout<<readers[i].maDG<<"    "<<readers[i].tenDG<<"      "<<readers[i].SDT<<"    "<<readers[i].soThe<<endl;
     }
+    cout<<"Tong: "<<readers.size()<<endl<<endl;
     system("pause");
 }
 
@@ -177,10 +177,10 @@ void ManagerReaders::display(vector<int>DS)
     for(int i = 0; i < DS.size(); i ++)
     {
         cout<<"  "<<i+1<<setw(19)<<readers[DS[i]].maDG<<setw(45)<<readers[DS[i]].tenDG<<setw(26)<<readers[DS[i]].SDT<<setw(21)<<readers[DS[i]].soThe<<endl;
-      //  cout<<readers[i].maDG<<"    "<<readers[i].tenDG<<"      "<<readers[i].SDT<<"    "<<readers[i].soThe<<endl;
-    }
-    system("pause");
 
+    }
+    cout<<"Tong: "<<DS.size()<<endl<<endl;
+    system("pause");
 }
 
 void ManagerReaders::readFile()
